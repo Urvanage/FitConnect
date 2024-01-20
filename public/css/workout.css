@@ -1,0 +1,376 @@
+html{
+    background-color:  #1E1F22;
+}
+
+.fitconnect{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index:99;
+	transition: all 0.5s ease;
+}
+
+.webname a{
+    padding-left: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+.fitcontainer{
+    background-color: #6FEAC8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons{
+    display: flex;
+
+}
+
+thead{
+    opacity: 0.7;
+}
+
+button{
+    padding: 5px;
+    margin:0 70px;
+    border: none;
+    background: none;
+    /* color: white; */
+    font-size: 25px;
+    font-weight: 600;
+}
+
+span{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.sat,
+.sun{
+    color: red;
+}
+
+.showDate{
+    color: white;
+    font-size: 6vh;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.date{
+    display: flex;
+    flex-direction: row;
+}
+
+.showRecord{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > Center button{
+        margin: 40px auto;
+        background-color: #6FEAC8;
+        width: 350px;
+        height: 50px;
+        border-radius: 10px;
+    }
+}
+
+.inline{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    color : white;
+    font-size: 4.5vh;
+    font-weight: bold;
+
+    > div{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.workCount{
+    margin-right: 30px;
+}
+
+.emphasis{
+    color: #6FEAC8;
+    font-size: 6vh;
+}
+
+.first-row{
+    background-color: black;
+    color: #6FEAC8 !important;
+}
+
+
+.calendar{
+    width: 80%;
+    max-width: 490px;
+    max-height: 570px;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-50px);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 2.3vh;
+    font-weight: bold;
+
+    
+    > li{
+        box-sizing: border-box; 
+        color: white;
+        text-align: center;
+        position: relative;
+        width: 85px;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+}
+
+#fire{
+    position: absolute;
+    opacity: 0.7;
+    z-index: -1;
+    left: 7px;
+    top: 11px;
+    display: block;
+    width: 70px;
+}
+
+.by-media{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 1400px) {
+    .by-media{
+        grid-template-columns: 1fr;
+        align-content: start;
+    }
+
+    .showRecord{
+        margin: 30px auto !important;
+    }
+
+    .selectExercise {
+        margin: 30px auto !important;
+    }
+}
+
+.addExercise{
+    width: 575px;
+    height: 60px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto auto auto;
+    background-color: #3D3F45;
+}
+
+.addExercise button{
+    color:white;
+}
+
+.selectExercise {
+    margin: auto auto;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    align-items: center;
+} 
+
+.workout-time{
+    font-size: 20px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selectExercise input{
+    margin-top: 35px;
+    width: 20px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #3D3F45;
+    border-radius: 5px;
+}
+input::placeholder{
+    text-align: center;
+    color:white;
+}
+
+.detailRecord button{
+    color:white;
+    background-color: #3D3F45;
+    border-radius: 5px;
+    height: 35px;
+    width: 35px;
+}
+
+.detailRecord{
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detailedRecord{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+    > img{
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+    }
+
+    .column{
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .workoutname{
+        color: white;
+        font-size: 4vh;
+        font-weight: bold;
+        margin-bottom: 20px;
+        width: 500px;
+    }
+
+    .set-info{
+        background-color: #3D3F45;
+        border-radius: 10px;
+        padding: 20px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px; /* 가로 간격 조절 */
+        grid-row-gap: 15px; 
+
+        width: 450px;
+
+        > div{
+            color: white;
+            font-size: 2vh;
+        }
+    }
+}
+
+.selectExercise{
+    max-width: 900px;
+    background: #7F7F7F;
+    border-radius: 10px;
+    padding: 30px 30px;
+    margin-top: 200px;
+}
+
+.selectExercise li{
+    width: max-content;
+    border-color: #3D3F45 !important;
+    padding: 5px 8px;
+    border: solid 1px;
+    margin: 0 3px;
+    border-radius: 10px;
+    background-color: #3D3F45;
+    color: white;
+    backdrop-filter: blur(5px); /* blur 효과 */
+}
+
+input{
+    color: white;
+}
+
+.detailRecordpart{
+    color: white;
+    div{
+        padding-bottom: 5px;
+    }
+
+    img{
+        margin-top: 20px;
+        max-width: 700px;
+        max-height: 500px;
+        margin-bottom: 10px;
+    }
+}
+
+.showandrecord{
+    font-size: 2vh;
+}
+
+.showandrecord img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.worktitle{
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.utilize{
+    font-size: 2.5vh !important;
+    font-weight: bold;
+}
+
+.detailRecordpart .worktitle:hover{
+    padding-bottom: 7px;
+    text-decoration: underline;
+}
+
+.detailRecordpart > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs{
+    font-size: 2vh;
+    border-bottom: 1px solid black;
+}
+
+.sets input{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 30px;
+}

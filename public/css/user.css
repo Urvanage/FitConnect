@@ -1,0 +1,172 @@
+html{
+    background-color:  #1E1F22;
+}
+
+.edit-greet {
+    width: 500px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: black ;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+textarea {
+    font-weight: bold;
+    font-size: 2.2vh;
+    max-height: 50px;
+    resize: none;
+}
+
+.inline {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.inline button {
+    font-size: 2vh;
+    font-weight: bold;
+    flex: 1;
+    width: 50%;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    color: white;
+}
+
+.fitconnect{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index:99;
+	transition: all 0.5s ease;
+}
+
+.webname a{
+    padding-left: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+.fitcontainer{
+    background-color: #6FEAC8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.user_table{
+    margin-top : 150px;
+    width: 900px;
+    height: 6vh;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto; 
+    flex-direction: row;
+    color: black;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: bold;
+    background-color:#6FEAC8;
+    opacity: 0.9;
+}
+
+.user_info{
+    width: 900px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto; 
+    min-height: 60px;
+    flex-direction: row;
+    align-items: center; 
+    font-size:2vh;
+    font-weight: bold;
+    background-color: white;
+    opacity: 0.8;
+    border-bottom: 1px solid black;
+}
+
+.user_id{
+    width: 15%;
+    text-align: center;
+    /* border-right: 1px solid black; */
+}
+
+.user_table .user_workout{
+    font-size: 1.8vh !important;
+}
+
+.user_workout{
+    width: 15%;
+    text-align: center; 
+    /* border-right: 1px solid black; */
+}
+
+.user_greet{
+    width: 60%;
+    text-align: center;
+    padding-left: 10px;
+    word-wrap: break-word;
+    position: relative;
+}
+
+#edit{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 2vh;
+}
+
+.user_info .user_greet{
+    text-align: left !important;
+}
+
+.record{
+    width: 10%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+}
+
+button{
+    margin-right: 5px;
+}
+
+.get_record{
+    width: 10%;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+

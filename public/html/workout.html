@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitconnect</title>
+    <link rel="stylesheet" href="../css/workout.css">
+    <script src="../js/community.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <header class="fitconnect">
+        <!-- Container for header content -->
+        <div class="fitcontainer">
+            <div class="heading">
+                <div class="webname">
+                    <!-- Logo of the website -->
+                    <a href="./index.html">FitConnect</a>
+                </div>
+            </div>
+            <!-- Navigation section within the header-->
+            <nav class="nav">
+                <ul>
+                    <li><a href="./community.html">Community</a></li>
+                    <li><a href="./user.html">Users</a></li>
+                    <li><a href="./workout.html">Workout</a></li>
+                    <!-- If user logined in website, show Logout list. Else, show Login list, redirect to login page -->
+                    <li id="check1"><a href="./login.html">Login</a></li>
+                    <li id="check2">Logout</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- By-media was set to display: grid, and a responsive website design was created by varying the setting value of template columns according to the size of the screen. In addition, if the user value of the logged-in user and the currently displayed calender is different, the calender is displayed in the center of the screen accordingly. -->
+    <div class="by-media">
+        <!-- Classing for displaying calendar of December -->
+        <ul class="calendar">
+            <li class="first-row">Sun</li>
+            <li class="first-row">Mon</li>
+            <li class="first-row">Tues</li>
+            <li class="first-row">Wed</li>
+            <li class="first-row">Thur</li>
+            <li class="first-row">Fri</li>
+            <li class="first-row">Sat</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="1">1</li>
+            <li class="2">2</li>
+            <li class="3">3</li>
+            <li class="4">4</li>
+            <li class="5">5</li>
+            <li class="6">6</li>
+            <li class="7">7</li>
+            <li class="8">8</li>
+            <li class="9">9</li>
+            <li class="10">10</li>
+            <li class="11">11</li>
+            <li class="12">12</li>
+            <li class="13">13</li>
+            <li class="14">14</li>
+            <li class="15">15</li>
+            <li class="16">16</li>
+            <li class="17">17</li>
+            <li class="18">18</li>
+            <li class="19">19</li>
+            <li class="20">20</li>
+            <li class="21">21</li>
+            <li class="22">22</li>
+            <li class="23">23</li>
+            <li class="24">24</li>
+            <li class="25">25</li>
+            <li class="26">26</li>
+            <li class="27">27</li>
+            <li class="28">28</li>
+            <li class="29">29</li>
+            <li class="30">30</li>
+            <li class="31">31</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <!-- Select the exercise for recording-->
+        <div class="selectExercise" id="exercise">
+            <!-- There are a total of six types of exercises that can be written briefly.-->
+            <ul>
+                <li>Fitness</li>
+                <li>Running</li>
+                <li>Hiking</li>
+                <li>Outdoor Cycling</li>
+                <li>Yoga</li>
+                <li>Walking</li>
+            </ul>
+
+            <!-- From the user, the execution time of the selected exercise is input and the information is stored in the DB together with the selected exercise. -->
+            <div class="workout-time">
+                <br>
+                Workout time
+                <div>
+                    <input type="text" id="hour" maxlength="2" placeholder="0">
+                    :
+                    <input type="text" id="min" maxlength="2" placeholder="0">
+                    :
+                    <input type="text" id="sec" maxlength="2" placeholder="0">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+
+            <!-- In "Fitness" list, user can also set a detailed Record about What exercise did user do, how many reps, how many kilograms did user weigh-->
+            <div class="detailRecord">
+                Detailed Record (Optional)
+                <button id="detailExercise">+</button>
+            </div>
+            
+            <!-- can receive the name of each detailed exercise inside the fitness section, a brief introduction to the exercise, the exercise method, and how many times and how many times the exercise was performed.-->
+            <div class="detailRecordpart">
+                <div class="Deadlift">
+                    <!-- Specific name of the exercise -->
+                    <div class="worktitle"> Deadlift</div>
+                    <div class="showandrecord">
+                        <img src="../src/Deadlift.gif" alt="">
+                        <div class="utilize"> Whole body</div>
+                        Compound weightlifting exercise that primarily targets the muscles of the lower back, glutes,
+                        hamstrings, and core <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. The lifter starts by bending at the hips and knees, grasping the barbell with hands placed
+                        slightly wider than shoulder-width apart.
+                        <br>
+                        2. Keeping the back straight and chest up, the lifter lifts the barbell by extending the hips
+                        and
+                        knees until they are in an upright, standing position.
+                    </div>
+                    <!-- get inputs from user-->
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <!-- Followings are equal from the example above: Explain the exercise, get inputs from user -->
+                <div class="DumbbellLunge">
+                    <div class="worktitle"> Dumbbell Lunge</div>
+                    <div class="showandrecord">
+                        <img src="../src/DumbbellLunge.gif" alt="">
+                        <div class="utilize"> Front thigh, hip up</div>
+                        Most commonly known lower body workout alongside with squats. You can target glutes and thigh
+                        muscles directly with this workout. It is also excellent for developing coordination of lower
+                        body muscles! <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Stand with your feet hip-width apart, holding a dumbbell in each hand at your sides
+                        <br>
+                        2. Take a step forward with one leg, lowering your body until both knees are bent at a 90-degree
+                        angle. The back knee should hover just above the ground.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <div class="FrontSquat">
+                    <div class="worktitle"> Front Squat</div>
+                    <div class="showandrecord">
+                        <img src="../src/FrontSquat.gif" alt="">
+                        <div class="utilize"> Front thigh</div>
+                        It is a workout that can give strong target to the muscles in front of your thighs with the
+                        barbell on your front shoulder! <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Begin by standing with your feet shoulder-width apart, and place a barbell in front of your
+                        shoulders, resting on the front of your deltoids. Hold the bar with a clean grip, elbows
+                        pointing forward.
+                        <br>
+                        2. Lower your body by bending at the hips and knees, keeping your back straight and chest up.
+                        Aim to bring your thighs parallel to the ground or lower, maintaining a neutral spine.
+                        <br>
+                        3. Push through your heels and drive your hips forward to return to the starting position. Keep
+                        your core engaged throughout the movement.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <div class="InclineDumbbellCurl">
+                    <div class="worktitle"> Incline Dumbbell Curl</div>
+                    <div class="showandrecord">
+                        <img src="../src/InclineDumbbellCurl.gif" alt="">
+                        <div class="utilize"> Toned arms</div>
+                        If you lie down on an incline bench, the range of arm movement is longer, so the degree of
+                        muscle intervention increases. It's an effective workout to increase the length of your biceps!
+                        <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Avoid swinging your arms as you curl.
+                        <br>
+                        2. Do not lock your elbows at the top of the movement. 3. Do not arch your back at any point
+                        during the exercise. 4. Do not use momentum to lift the weights.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <div class="BenchPress">
+                    <div class="worktitle"> Bench Press</div>
+                    <div class="showandrecord">
+                        <img src="../src/BenchPress.gif" alt="">
+                        <div class="utilize">Overall chest</div>
+                        This is one of the most common chest workouts. Even if you only do bench presses for your pecs,
+                        it may suffice. <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Lie down on a flat bench with your eyes under the bar.
+                        <br>
+                        2. Position your feet flat on the ground with your shoulder blades retracted and chest up.
+                        <br>
+                        3. Grasp the bar slightly wider than shoulder-width apart.
+                        <br>
+                        4. Unrack the bar and hold it straight above your chest with your arms extended.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <div class="PullUp">
+                    <div class="worktitle"> Pull Up</div>
+                    <div class="showandrecord">
+                        <img src="../src/PullUp.gif" alt="">
+                        <div class="utilize">Wide shoulders, back</div>
+                        You pull your bodywieght up with your upper body strength in this exercise. It is called pull-up
+                        when your palms face outwards, and chin-up when your palms face inwards. <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Stand directly underneath a pull-up bar with your arms fully extended and a grip slightly
+                        wider than shoulder width.
+                        <br>
+                        2. Keep your body straight and your core tight.
+                        <br>
+                        3. Look straight ahead and keep your chin slightly tucked.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <div class="PushUp">
+                    <div class="worktitle"> Push Up</div>
+                    <div class="showandrecord">
+                        <img src="../src/PushUp.gif" alt="">
+                        <div class="utilize">Overall chest</div>
+                        It's a most famous, and at the same time highly effective, body weight exercise. If you put your
+                        hands further apart, you can target the outside of your pecs. <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Get into a plank position, with hands slightly wider than shoulder-width apart and feet
+                        together. Keep your arms straight, core engaged, and head in line with your spine.
+                        <br>
+                        2. Keep your body in a straight line from head to toe.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+                <div class="StandingDumbbellCurl">
+                    <div class="worktitle"> Standing Dumbbell Curl</div>
+                    <div class="showandrecord">
+                        <img src="../src/StandingDumbbellCurl.gif" alt="">
+                        <div class="utilize">Biceps</div>
+                        An isolation exercise that primarily targets the muscles of the biceps. <br><br>
+
+                        <div class="utilize">Starting Position</div>
+                        1. Stand with your feet shoulder-width apart, holding a dumbbell in each hand at your sides.
+                        <br>
+                        2. Keep your back straight, chest up, and shoulders back.
+                    </div>
+                    <div class="inputs">
+                        <div class="sets">
+                            Set 1
+                            <input id="kg1" type="text" placeholder="0">kg
+                            <input id="rep1" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 2
+                            <input id="kg2" type="text" placeholder="0">kg
+                            <input id="rep2" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 3
+                            <input id="kg3" type="text" placeholder="0">kg
+                            <input id="rep3" type="text" placeholder="0">reps
+                        </div>
+                        <div class="sets">
+                            Set 4
+                            <input id="kg4" type="text" placeholder="0">kg
+                            <input id="rep4" type="text" placeholder="0">reps
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- By clicking this button, If the input time information and the detailed exercise information of fitness are recorded, it is checked whether it is valid information, and the information is recorded in the map inside the DB using the user's selected date as a key.-->
+            <div class="addExercise">
+                <button id="addExerciseButton">Add Exercise record</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
+    <script src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
+    <script type="module" src="../index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitconnect</title>
+    <link rel="stylesheet" href="../css/user.css">
+    <script src="../js/user.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <header class="fitconnect">
+        <!-- Container for header content -->
+        <div class="fitcontainer">
+            <div class="heading">
+                <div class="webname">
+                    <!-- Logo of the website -->
+                    <a href="./index.html">FitConnect</a>
+                </div>
+            </div>
+            <!-- Navigation section within the header-->
+            <nav class="nav">
+                <ul>
+                    <li><a href="./community.html">Community</a></li>
+                    <li><a href="./user.html">Users</a></li>
+                    <li><a href="./workout.html">Workout</a></li>
+                    <!-- If user logined in website, show Logout list. Else, show Login list, redirect to login page -->
+                    <li id="check1"><a href="./login.html">Login</a></li>
+                    <li id="check2">Logout</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- After fetching the current user's information from the database, create a 'user-info' div with a button to view the user's id, exercise records count, user's greeting, and the recorded calendar. Add this 'user-info' div below the 'user_table' div. -->
+    <div class="user_table">
+        <!-- Displaying user id-->
+        <div class="user_id">ID</div>
+        <!-- Display that users workout frequency -->
+        <div class="user_workout">Workout Frequency</div>
+        <!-- Display user setted greeting message or default message -->
+        <div class="user_greet">Introduction</div>
+        <!-- Button to see user's record calendar -->
+        <div class="record"></div>
+    </div>
+
+    <!-- For logined user, user can edit the greeting message -->
+    <div class="edit-greet">
+        Edit greeting message
+        <!-- By textarea, get inputs from logined user -->
+        <textarea name="" id="editgreet" cols="30" rows="6" placeholder="Enter your greeting."></textarea>
+        <!-- Edit button will update the greeting message, cancel will cancel editing -->
+        <div class="inline">
+            <button id="messageedit">Edit</button>
+            <button id="messagecancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
+    <script src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
+    <script type="module" src="../index.js"></script>
+
+</body>
+
+</html>

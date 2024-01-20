@@ -1,0 +1,262 @@
+html{
+    background-color:  #1E1F22;
+}
+
+.fitconnect{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index:99;
+	transition: all 0.5s ease;
+}
+
+.webname a{
+    padding-left: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+.fitcontainer{
+    background-color: #6FEAC8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.post{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+table{
+    margin-top : 150px;
+    min-width: 550px;
+    /* background-color: white; */
+    width: 65%;
+    border-collapse: collapse;
+}
+
+th{
+    background-color: #6FEAC8;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding-left: 10px;
+}
+
+span{
+    font-size: 3vh;
+}
+
+
+.post-box{
+    background:none;
+    width: 100%;
+    margin: 0 auto;
+    height: 6vh;
+    display: flex;
+    align-items: center; 
+    color: #6FEAC8;
+    font-weight: bold;
+}
+
+.name, .title, .commentcount {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name{
+    background: none;
+    border: 1px solid #3D3F45;
+    border-collapse: collapse;
+    width: 15%;
+}
+
+.title{
+    width: 80%;
+    border: 1px solid #3D3F45;
+    border-collapse: collapse;
+    padding-left: 20px;
+    justify-content: start !important;
+}
+
+.commentcount{
+    border: 1px solid  #3D3F45 opacity(0.5);
+    background-color: #3D3F45;
+    color: white;
+    width: 8%;
+    font-weight: bold;
+}
+
+.post-button{
+    color: #6FEAC8;
+    background: none;
+    border: 1px solid #6FEAC8;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    right: 18%;
+    margin-top: 80px;
+    height: 45px;
+    width: 120px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.getpostinput{
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    margin-bottom: 80px;
+    width: 750px;
+
+    color: white;
+    font-size: 3vh;
+    font-weight: bold;
+
+    ::placeholder{
+        color: white;
+    }
+
+    input{
+        border: 0.5px solid white;
+        color: white;
+        background: none;
+    }
+    textarea{
+        border: 0.5px solid white;
+        color: white;
+
+        background: none;
+    }
+}
+
+input{
+    height: 4vh;
+    font-size: 2vh;
+}
+
+textarea{
+    font-size: 1.8vh;
+}
+
+.getpostinput button{
+    height: 5vh;
+    background-color: #6FEAC8;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.getpage {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 또는 다른 적절한 값을 사용하세요. */
+    max-width: 900px; /* 최대 너비를 지정할 수 있습니다. */
+    margin: 0 auto; /* 가로 여백을 자동으로 설정하여 가운데 정렬합니다. */
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: white;
+}
+
+.get_title{
+    font-size: 5.5vh;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.get_content{
+    margin-top: 30px;
+    font-size: 2.5vh;
+    width: 100%; /* 또는 다른 적절한 값을 사용하세요. */
+    max-width: 900px;
+    margin-bottom: 90px;
+}
+
+.get_comment{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 또는 다른 적절한 값을 사용하세요. */
+    max-width: 900px; /* 최대 너비를 지정할 수 있습니다. */
+    word-wrap: break-word;
+    border-top: 1px solid white; 
+}
+
+#gotopostpage {
+    background-color: #6FEAC8;
+    color: black;
+    width: 120px;
+    height: 60px;
+    font-size: 2.5vh;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,200%);
+    
+}
+
+#entercomment{
+    background-color: #3D3F45;
+    color: white;
+}
+
+.uploadcomment{
+    font-weight: bold;
+    width: 10%;
+    font-size: 1.5vh;
+    color: black;
+    background-color: #6FEAC8;
+}
+
+.comment_id{
+    font-size:1.3vh;
+    margin-bottom: 8px;
+}
+
+.pageinfo{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+}
+
+textarea{
+    resize: none;
+}
+
+.entercomment{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,20%);
+    display: flex;
+    flex-direction: row;
+}

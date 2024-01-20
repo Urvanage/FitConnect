@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+  <header class="fitconnect">
+    <!-- Container for header content -->    
+    <div class="fitcontainer">
+      <div class="heading">
+        <div class="webname">
+          <!-- Logo of the website -->
+          <a href="./index.html">FitConnect</a>
+        </div>
+      </div>
+      <!-- Navigation section within the header-->
+      <nav class="nav">
+        <ul>
+          <li><a href="./community.html">Community</a></li>
+          <li><a href="./user.html">Users</a></li>
+          <li><a href="./workout.html">Workout</a></li>
+          <!-- If user logined in website, show Logout list. Else, show Login list, redirect to login page -->
+          <li id="check1"><a href="./login.html">Login</a></li>
+          <li id="check2">Logout</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Title section for main page -->
+  <div class="title">
+    <!-- In motive section, add motivating sentences -->
+    <div class="motive">
+      <div> Start Exercising</div>
+      <div> A Healthy body and mind begin with physical activity</div>
+    </div>
+    <!-- In explain section, describes the details-->
+    <div class="explain">
+      <div> Track your progress daily by keeping records. </div>
+      <div> Document the calories burned and the weights lifted by yourself. </div>
+    </div>
+  </div>
+
+  <!-- Encourage section, to get people to use the website-->
+  <div class="encourage">
+    <!-- In motive section, add motivating sentences -->
+    <div class="motive">
+      <div> For a safer and quicker transformation </div>
+    </div>
+    <!-- In explain section, describes the details-->
+    <div class="explain">
+      <div> Watch workout videos of professional athletes. </div>
+      <div> Gain motivation by observing their exercise techniques. </div>
+    </div>
+  </div>
+
+  <!-- Fitness Inspiration Section. through Youtube workout videos -->
+  <!--Constructed with a display grid and responsive design, the layout adjusts template columns based on screen size for a responsive design. -->
+  <div class="youtube-contents">
+    <iframe src="https://www.youtube.com/embed/yPjJA9VKX_Y?si=2nym_vzq_dmVm5Q1" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/KxoD2YkEl1w?si=keS_W7qkZmoNFWS6" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/k_YLxj8Nehw?si=EI8NlHyqxvooXJ2c" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/f6t9TQqdUzg?si=CMIrqUr-S4Ytc4in" title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+
+  <!-- Section that describes the community functionality of our website and asks user to participate -->
+  <div class="explain-community">
+    <img src="../src/dumbel.png" alt="">
+    Share your knowledge about fitness with the community. Track your workout progress and find motivation from the
+    community. Get insights, share experiences, and stay motivated together!
+    <!-- By this button, user can move to community page -->
+    <button id="communitybutton"><a href="community.html">Move to Community</a></button>
+  </div>
+
+  <!-- Check the website creator's GitHub for other tasks and check for copyright holders -->
+  <div class="contact">
+    <div class="fitcontainer">
+      <div class="heading">
+        <div class="webname">
+          <a href="fitconnect.html">FitConnect</a>
+        </div>
+      </div>
+      <div class="icons">
+        <a href="https://github.com/Urvanage"><img src="../src/github.png" alt=""></a>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright ⓒ Kim Junghwan, 2023
+    </div>
+  </div>
+
+  <script src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
+  <script src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
+  <script type="module" src="../index.js"></script>
+
+</body>
+
+</html>

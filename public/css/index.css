@@ -1,0 +1,166 @@
+html{
+    background-color:  #1E1F22;
+}
+
+.fitconnect{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	z-index:99;
+	transition: all 0.5s ease;
+}
+
+.webname a{
+    padding-left: 10px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+.fitcontainer{
+    background-color: #6FEAC8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: max-content;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+ul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    height: 850px;
+    /* display: flex;
+    align-items: center; /* align-content 대신 align-items를 사용하세요. */
+    /* justify-content: center;  */
+    background-image: url(../src/3.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    /* height: 50vh;  */
+}
+
+.motive{
+    margin-top:  60px;
+    padding-top: 100px;
+    color: white;
+    font-size: 6vh;
+    font-weight: 600;
+
+}
+
+.explain{
+    margin-top: 20vh;
+    color: white;
+    font-size: 3vh;
+    font-weight: 600;
+    padding-bottom: 200px;
+}
+
+.encourage .motive {
+    margin-top: 50px !important;
+    padding: 0 20px !important
+}
+
+.encourage .explain{
+    margin-top: 20px !important;
+    padding: 0 20px 40px 20px !important;
+}
+
+iframe{
+    width: 460px;
+    height: 315px;
+}
+
+.youtube-contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .youtube-contents{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .youtube-contents{
+        grid-template-columns: 1fr;
+    }
+}
+
+.explain-community{
+    background-color: #6FEAC8;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 84vh; /* 100% of the viewport height */
+    padding: 0 20%;
+    margin: 0;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+img{
+    height: 200px;
+    margin-right: 20px;
+}
+
+button{
+    margin-top: 60px;
+    background-color: #1E1F22;
+    color: white;
+    width: 80%;
+    font-size: 3vh;
+    font-weight: bold;
+    height: fit-content;
+}
+
+.contact{
+    color :white !important;
+    padding-left: 80px;
+    margin: 20px 0;
+}
+
+.contact .fitcontainer{
+    background-color: #1E1F22;
+}
+
+.copyright{
+    padding-left: 10px;
+}
+
+.contact a{
+    color: white;
+}
+
+.icons img{
+    padding-top: 20px;
+    padding-right: 50px;
+    height: 50px;
+}
+
+button a{
+    color :white;
+}

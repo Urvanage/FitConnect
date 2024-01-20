@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="module" src="../index.js"></script>
+
+</head>
+
+<body>
+    <header class="fitconnect">
+        <!-- Container for header content -->
+        <div class="fitcontainer">
+            <div class="heading">
+                <div class="webname">
+                    <!-- Logo of the website -->
+                    <a href="./index.html">FitConnect</a>
+                </div>
+            </div>
+            <!-- Navigation section within the header-->
+            <nav class="nav">
+                <ul>
+                    <li><a href="./community.html">Community</a></li>
+                    <li><a href="./user.html">Users</a></li>
+                    <li><a href="./workout.html">Workout</a></li>
+                    <!-- If user logined in website, show Logout list. Else, show Login list, redirect to login page -->
+                    <li id="check1"><a href="./login.html">Login</a></li>
+                    <li id="check2">Logout</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Container for login and registration section -->
+    <div class="container">
+        <!--Using a checkbox, you can switch to another function by pressing a specific text when logging in or registering -->
+        <input type="checkbox" id="flip">
+
+        <!-- By the checkbox, in login state, "right" class will be shown-->
+        <div class="covertext">
+            <div class="right">
+                <div class="text">
+                    <span class="text1">Record the exercise</span>
+                    <span class="text1"> you did today!</span>
+                </div>
+            </div>
+            <!-- In registration state, "left" class will be shown-->
+            <div class="left">
+                <div class="text">
+                    <span class="text1">Start recording exercise</span>
+                    <span class="text1">Way to be healthier</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- div that contains login form and registration form-->
+        <div class="changing">
+
+            <!-- div for login-->
+            <div class="login form">
+                <div class="title">Login</div>
+                <!-- Get the id, password. Then look inside the DB. If it matches user can login-->
+                <div class="getinputs">
+                    <div class="inputbox">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="loginid" placeholder="Enter your ID">
+                    </div>
+                    <div class="inputbox">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginpass" placeholder="Enter your password">
+                    </div>
+                    <div class="inputbox button">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <!-- When this text is clicked, checkbox will be changed -->
+                    <div class="text">Not a member?
+                        <label for="flip">Signup now</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- div for signup-->
+            <div class="signup form">
+                <div class="title">Sign Up</div>
+                <!-- Get the name, id, and password from user. If id alreay exists in DB, alert to do it again -->
+                <div class="getinputs">
+                    <div class="inputbox">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="signupname" placeholder="Enter your name">
+                    </div>
+                    <div class="inputbox">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="signupid" placeholder="Enter your ID">
+                    </div>
+                    <div class="inputbox">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signuppass" placeholder="Enter your password">
+                    </div>
+                    <!-- Click this button to submit the infomation-->
+                    <div class="inputbox button">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <!-- When this text is clicked, checkbox will be changed -->
+                    <div class="text">Already have an account?
+                        <label for="flip">Login now</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/__/firebase/10.7.1/firebase-app-compat.js"></script>
+    <script src="/__/firebase/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="/__/firebase/10.7.1/firebase-storage-compat.js"></script>
+
+</body>
+
+</html>
