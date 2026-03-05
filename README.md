@@ -1,3 +1,43 @@
+# Web-based Workout Tracking & Community Platform
+
+A web application that allows users to record workout history and interact with others through a community board.
+
+The system provides calendar-based workout logging, user profiles, and a simple community space where users can share posts and comments related to exercise.
+
+---
+
+## Features
+
+### Authentication
+- Login and sign-up functionality
+- User session management using `sessionStorage`
+- User credential verification through Firebase Firestore
+
+### Workout Recording
+- Interactive calendar interface for selecting workout dates
+- Ability to add and delete workout records
+- Two types of workout entries:
+  - **General workout**: exercise type and duration
+  - **Fitness workout**: weight and repetitions (up to 4 sets)
+- Dates with workout records are visually marked on the calendar
+
+### Community Board
+- View posts and comments
+- Logged-in users can create posts and write comments
+- Non-logged-in users can view content only
+
+### User Profile
+- Displays user ID and the number of workouts performed in the current month
+- Editable personal greeting message
+- Navigation to the user's workout record page
+
+### Main Page
+- Responsive grid-based layout
+- Embedded YouTube videos using `iframe`
+- Navigation button linking to the community page
+
+---
+
 ## 0. 담당한 기능 개발 및 구현 기술  
 - **기능 개발**  
   - 로그인·회원가입 폼 및 세션 저장/제거 (sessionStorage)  
